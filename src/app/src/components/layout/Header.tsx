@@ -16,7 +16,7 @@ export function Header({ currentPage, setCurrentPage, theme, toggleTheme }: Head
           {/* Logo - Clickable to go home */}
           <div className="header-logo-section" onClick={() => setCurrentPage('home')}>
             <div className="header-logo">
-              <img src="/logo.svg" alt="Athies Batiment Logo" className="header-logo-image" />
+              <img src="/logo.png" alt="Athies Batiment Logo" className="header-logo-image" />
             </div>
           </div>
 

@@ -73,7 +73,7 @@ export function Home() {
         {/* SECTION 1 — HERO */}
         <div className="hero-section-construction">
           <div className="hero-logo-main">
-            <img src="/logo.svg" alt="Athies Batiment Logo" className="hero-logo-image" />
+            <img src="/logo.png" alt="Athies Batiment Logo" className="hero-logo-image" />
           </div>
 
           <h1 className="hero-title-construction">
