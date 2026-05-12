@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Home } from './src/components/pages/Home';
-import { Contact } from './src/components/pages/Contact';
-import { Header } from './src/components/layout/Header';
-import { Footer } from './src/components/layout/Footer';
-import { MobileNav } from './src/components/layout/MobileNav';
-import './src/App.css';
+import { Home } from './components/pages/Home';
+import { Contact } from './components/pages/Contact';
+import { Header } from './components/layout/Header';
+import { Footer } from './components/layout/Footer';
+import { MobileNav } from './components/layout/MobileNav';
+import './App.css';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState<'home' | 'contact'>('home');
