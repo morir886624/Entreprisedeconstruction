@@ -1,0 +1,569 @@
+.home-container {
+  min-height: 100vh;
+  padding: 2rem 1rem 2rem;
+}
+
+.home-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.dark .section-title {
+  color: #f8fafc;
+}
+
+/* ========================
+   ATHIES BATIMENT STYLES
+   ======================== */
+
+/* SECTION 1 — HERO CONSTRUCTION */
+.hero-section-construction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1rem 6rem;
+  gap: 2rem;
+}
+
+.hero-logo-main {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.hero-logo-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.hero-title-construction {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #0f172a;
+  margin: 0;
+}
+
+.dark .hero-title-construction {
+  color: #f8fafc;
+}
+
+.hero-location-accent {
+  color: #06b6d4;
+}
+
+.hero-subtitle-construction {
+  font-size: 1.25rem;
+  color: #64748b;
+  max-width: 700px;
+  margin: 0 auto;
+  font-style: italic;
+}
+
+.dark .hero-subtitle-construction {
+  color: #94a3b8;
+}
+
+.services-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.service-pill {
+  padding: 0.5rem 1rem;
+  background: rgba(6, 182, 212, 0.1);
+  color: #06b6d4;
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.dark .service-pill {
+  background: rgba(6, 182, 212, 0.15);
+  border-color: rgba(6, 182, 212, 0.4);
+}
+
+.certifications-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.cert-badge {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.dark .cert-badge {
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  color: #f8fafc;
+}
+
+.hero-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.btn-primary-large,
+.btn-secondary-large {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.btn-primary-large {
+  background: #06b6d4;
+  color: white;
+  border: 2px solid #06b6d4;
+}
+
+.btn-primary-large:hover {
+  background: #0891b2;
+  border-color: #0891b2;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(6, 182, 212, 0.3);
+}
+
+.btn-secondary-large {
+  background: transparent;
+  color: #06b6d4;
+  border: 2px solid rgba(6, 182, 212, 0.5);
+}
+
+.dark .btn-secondary-large {
+  border-color: rgba(6, 182, 212, 0.6);
+}
+
+.btn-secondary-large:hover {
+  background: rgba(6, 182, 212, 0.1);
+  border-color: #06b6d4;
+  transform: translateY(-2px);
+}
+
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 3rem;
+  animation: bounce 2s infinite;
+}
+
+.scroll-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #64748b;
+}
+
+.dark .scroll-text {
+  color: #94a3b8;
+}
+
+.scroll-arrow {
+  width: 24px;
+  height: 24px;
+  color: #06b6d4;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* SECTION 2 — NOS SERVICES */
+.services-section {
+  margin-bottom: 6rem;
+}
+
+.services-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #64748b;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.dark .services-intro {
+  color: #94a3b8;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.service-card {
+  position: relative;
+  aspect-ratio: 3/2;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+}
+
+.service-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.8));
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.service-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+.service-btn {
+  padding: 0.5rem 1.5rem;
+  background: transparent;
+  color: #06b6d4;
+  border: 2px solid #06b6d4;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.service-btn:hover {
+  background: #06b6d4;
+  color: white;
+}
+
+/* SECTION 3 — BANNIÈRE PLEINE LARGEUR */
+.full-width-banner {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin: 0 -50vw 6rem;
+  height: 400px;
+  background: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1600&h=400&fit=crop') center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.banner-text {
+  position: relative;
+  z-index: 1;
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  padding: 0 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  letter-spacing: 0.02em;
+}
+
+/* SECTION 4 — NOS CERTIFICATIONS */
+.certifications-section {
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+.certifications-text {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  color: #64748b;
+  font-size: 1.125rem;
+  line-height: 1.7;
+}
+
+.dark .certifications-text {
+  color: #94a3b8;
+}
+
+.certifications-logos {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.cert-logo-placeholder {
+  width: 200px;
+  height: 150px;
+  background: rgba(6, 182, 212, 0.1);
+  border: 2px solid rgba(6, 182, 212, 0.3);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #06b6d4;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.dark .cert-logo-placeholder {
+  background: rgba(6, 182, 212, 0.15);
+  border-color: rgba(6, 182, 212, 0.4);
+}
+
+.cert-logo-placeholder:hover {
+  transform: scale(1.05);
+  border-color: #06b6d4;
+}
+
+.cert-cta {
+  margin-top: 2rem;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #06b6d4;
+  border: 2px solid rgba(6, 182, 212, 0.5);
+  padding: 0.875rem 1.75rem;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-size: 0.9375rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dark .btn-secondary {
+  border-color: rgba(6, 182, 212, 0.6);
+}
+
+.btn-secondary:hover {
+  background: rgba(6, 182, 212, 0.1);
+  border-color: #06b6d4;
+  transform: translateY(-2px);
+}
+
+/* SECTION CTA — UN PROJET EN TÊTE */
+.services-cta-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(6, 182, 212, 0.05);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 16px;
+  margin: 4rem 0 6rem;
+}
+
+.dark .services-cta-section {
+  background: rgba(6, 182, 212, 0.08);
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+.services-cta-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+.dark .services-cta-title {
+  color: #f8fafc;
+}
+
+.services-cta-description {
+  font-size: 1.125rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.dark .services-cta-description {
+  color: #94a3b8;
+}
+
+.services-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* RESPONSIVE — TABLETTE */
+@media (max-width: 1024px) {
+  .hero-title-construction {
+    font-size: 3rem;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner-text {
+    font-size: 2rem;
+  }
+}
+
+/* RESPONSIVE — MOBILE */
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem 0.5rem 2rem;
+  }
+
+  .hero-section-construction {
+    padding: 2rem 1rem 4rem;
+  }
+
+  .hero-title-construction {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle-construction {
+    font-size: 1rem;
+  }
+
+  .hero-logo-image {
+    max-width: 200px;
+  }
+
+  .services-pills {
+    gap: 0.5rem;
+  }
+
+  .service-pill {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .certifications-badges {
+    gap: 0.75rem;
+  }
+
+  .cert-badge {
+    font-size: 0.75rem;
+  }
+
+  .hero-cta-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary-large,
+  .btn-secondary-large {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .full-width-banner {
+    height: 300px;
+  }
+
+  .banner-text {
+    font-size: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .certifications-logos {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .services-cta-section {
+    padding: 3rem 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .services-cta-title {
+    font-size: 2rem;
+  }
+
+  .services-cta-buttons {
+    flex-direction: column;
+  }
+
+  .services-cta-buttons .btn-primary-large,
+  .services-cta-buttons .btn-secondary-large {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title-construction {
+    font-size: 1.75rem;
+  }
+
+  .banner-text {
+    font-size: 1.25rem;
+  }
+
+  .service-name {
+    font-size: 1.25rem;
+  }
+
+  .services-cta-title {
+    font-size: 1.75rem;
+  }
+}

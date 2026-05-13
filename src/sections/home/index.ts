@@ -1,0 +1,5 @@
+export { HeroSection } from './HeroSection'
+export { ServicesSection } from './ServicesSection'
+export { BannerSection } from './BannerSection'
+export { CertificationsSection } from './CertificationsSection'
+export { CTASection } from './CTASection'
