@@ -1,56 +1,24 @@
-import { useState } from 'react'
 import { Mail, User, MessageSquare, Send, CheckCircle2, AlertCircle, Phone } from 'lucide-react'
-import { FormulaireContact, FormulaireEtat } from '@types'
+import { useContactForm } from '@hooks/useContactForm'
 
 export function FormulaireSection() {
-  const [formStatus, setFormStatus] = useState<FormulaireEtat['status']>('idle')
-  const [formData, setFormData] = useState<FormulaireContact>({
-    name: '',
-    email: '',
-    phone: '',
-    projectType: '',
-    message: '',
-  })
-  const [acceptTerms, setAcceptTerms] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setFormStatus('submitting')
-
-    try {
-      const response = await fetch('https://formspree.io/f/YOUR_FORMSPREE_ID', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      })
-
-      if (response.ok) {
-        setFormStatus('success')
-        setFormData({ name: '', email: '', phone: '', projectType: '', message: '' })
-        setAcceptTerms(false)
-        setTimeout(() => setFormStatus('idle'), 5000)
-      } else {
-        setFormStatus('error')
-        setTimeout(() => setFormStatus('idle'), 5000)
-      }
-    } catch (error) {
-      setFormStatus('error')
-      setTimeout(() => setFormStatus('idle'), 5000)
-    }
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    })
-  }
+  const {
+    formData,
+    erreurs,
+    touched,
+    acceptTerms,
+    setAcceptTerms,
+    formulaireValide,
+    envoi,
+    handleChange,
+    handleBlur,
+    handleSubmit,
+  } = useContactForm()
 
   return (
     <div className="contact-form-section">
-      <form onSubmit={handleSubmit} className="contact-form">
+      <form onSubmit={handleSubmit} className="contact-form" noValidate>
+        {/* Nom complet */}
         <div className="form-group">
           <label htmlFor="name" className="form-label">
             <User className="w-4 h-4" />
@@ -62,12 +30,23 @@ export function FormulaireSection() {
             name="name"
             value={formData.name}
             onChange={handleChange}
+            onBlur={handleBlur}
             required
-            className="form-input"
+            aria-required="true"
+            aria-invalid={touched.name && !!erreurs.name}
+            aria-describedby={touched.name && erreurs.name ? "name-error" : undefined}
+            className={`form-input ${touched.name && erreurs.name ? 'form-input-error' : ''}`}
             placeholder="Votre nom"
           />
+          {touched.name && erreurs.name && (
+            <div id="name-error" className="form-error" role="alert">
+              <AlertCircle className="w-4 h-4" />
+              <span>{erreurs.name}</span>
+            </div>
+          )}
         </div>
 
+        {/* Email */}
         <div className="form-group">
           <label htmlFor="email" className="form-label">
             <Mail className="w-4 h-4" />
@@ -79,16 +58,27 @@ export function FormulaireSection() {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            onBlur={handleBlur}
             required
-            className="form-input"
+            aria-required="true"
+            aria-invalid={touched.email && !!erreurs.email}
+            aria-describedby={touched.email && erreurs.email ? "email-error" : undefined}
+            className={`form-input ${touched.email && erreurs.email ? 'form-input-error' : ''}`}
             placeholder="votre.email@exemple.com"
           />
+          {touched.email && erreurs.email && (
+            <div id="email-error" className="form-error" role="alert">
+              <AlertCircle className="w-4 h-4" />
+              <span>{erreurs.email}</span>
+            </div>
+          )}
         </div>
 
+        {/* Téléphone */}
         <div className="form-group">
           <label htmlFor="phone" className="form-label">
             <Phone className="w-4 h-4" />
-            <span>Téléphone</span>
+            <span>Téléphone (optionnel)</span>
           </label>
           <input
             type="tel"
@@ -96,12 +86,22 @@ export function FormulaireSection() {
             name="phone"
             value={formData.phone}
             onChange={handleChange}
-            required
-            className="form-input"
+            onBlur={handleBlur}
+            aria-required="false"
+            aria-invalid={touched.phone && !!erreurs.phone}
+            aria-describedby={touched.phone && erreurs.phone ? "phone-error" : undefined}
+            className={`form-input ${touched.phone && erreurs.phone ? 'form-input-error' : ''}`}
             placeholder="06 XX XX XX XX"
           />
+          {touched.phone && erreurs.phone && (
+            <div id="phone-error" className="form-error" role="alert">
+              <AlertCircle className="w-4 h-4" />
+              <span>{erreurs.phone}</span>
+            </div>
+          )}
         </div>
 
+        {/* Type de projet */}
         <div className="form-group">
           <label htmlFor="projectType" className="form-label">
             <MessageSquare className="w-4 h-4" />
@@ -112,8 +112,12 @@ export function FormulaireSection() {
             name="projectType"
             value={formData.projectType}
             onChange={handleChange}
+            onBlur={handleBlur}
             required
-            className="form-input"
+            aria-required="true"
+            aria-invalid={touched.projectType && !!erreurs.projectType}
+            aria-describedby={touched.projectType && erreurs.projectType ? "projectType-error" : undefined}
+            className={`form-input ${touched.projectType && erreurs.projectType ? 'form-input-error' : ''}`}
           >
             <option value="">Sélectionnez un service</option>
             <option value="maconnerie">Maçonnerie générale</option>
@@ -126,8 +130,15 @@ export function FormulaireSection() {
             <option value="renovation">Rénovation</option>
             <option value="autre">Autre</option>
           </select>
+          {touched.projectType && erreurs.projectType && (
+            <div id="projectType-error" className="form-error" role="alert">
+              <AlertCircle className="w-4 h-4" />
+              <span>{erreurs.projectType}</span>
+            </div>
+          )}
         </div>
 
+        {/* Description */}
         <div className="form-group">
           <label htmlFor="message" className="form-label">
             <MessageSquare className="w-4 h-4" />
@@ -138,13 +149,27 @@ export function FormulaireSection() {
             name="message"
             value={formData.message}
             onChange={handleChange}
+            onBlur={handleBlur}
             required
+            aria-required="true"
+            aria-invalid={touched.message && !!erreurs.message}
+            aria-describedby={touched.message && erreurs.message ? "message-error" : undefined}
             rows={6}
-            className="form-textarea"
+            className={`form-textarea ${touched.message && erreurs.message ? 'form-input-error' : ''}`}
             placeholder="Décrivez-nous votre projet en détail..."
           />
+          <div className="form-char-counter">
+            {formData.message.trim().length}/20 caractères minimum
+          </div>
+          {touched.message && erreurs.message && (
+            <div id="message-error" className="form-error" role="alert">
+              <AlertCircle className="w-4 h-4" />
+              <span>{erreurs.message}</span>
+            </div>
+          )}
         </div>
 
+        {/* Checkbox */}
         <div className="form-checkbox-group">
           <input
             type="checkbox"
@@ -152,6 +177,7 @@ export function FormulaireSection() {
             checked={acceptTerms}
             onChange={(e) => setAcceptTerms(e.target.checked)}
             required
+            aria-required="true"
             className="form-checkbox"
           />
           <label htmlFor="acceptTerms" className="form-checkbox-label">
@@ -159,15 +185,29 @@ export function FormulaireSection() {
           </label>
         </div>
 
+        {/* 🛡️ COUCHE 2 — Protection multi-couches du bouton */}
         <button
           type="submit"
-          disabled={formStatus === 'submitting' || !acceptTerms}
+          disabled={!formulaireValide || envoi.loading}
+          aria-disabled={!formulaireValide || envoi.loading}
+          onClick={(e) => {
+            // Double protection : bloquer aussi le clic direct
+            if (!formulaireValide) {
+              e.preventDefault()
+              return
+            }
+          }}
           className="form-submit-btn"
         >
-          {formStatus === 'submitting' ? (
+          {envoi.loading ? (
             <>
               <div className="spinner" />
               <span>Envoi en cours...</span>
+            </>
+          ) : envoi.success ? (
+            <>
+              <CheckCircle2 className="w-5 h-5" />
+              <span>Demande envoyée ✓</span>
             </>
           ) : (
             <>
@@ -177,17 +217,18 @@ export function FormulaireSection() {
           )}
         </button>
 
-        {formStatus === 'success' && (
+        {/* Messages de statut */}
+        {envoi.success && (
           <div className="form-status form-status-success">
             <CheckCircle2 className="w-5 h-5" />
-            <span>Demande envoyée avec succès ! Nous vous recontacterons rapidement.</span>
+            <span>{envoi.message}</span>
           </div>
         )}
 
-        {formStatus === 'error' && (
+        {envoi.error && (
           <div className="form-status form-status-error">
             <AlertCircle className="w-5 h-5" />
-            <span>Erreur lors de l'envoi. Veuillez réessayer ou nous contacter par téléphone.</span>
+            <span>{envoi.message}</span>
           </div>
         )}
       </form>

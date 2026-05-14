@@ -103,6 +103,45 @@
   min-height: 120px;
 }
 
+.form-input-error {
+  border-color: #dc2626 !important;
+  background-color: rgba(239, 68, 68, 0.05);
+}
+
+.dark .form-input-error {
+  background-color: rgba(239, 68, 68, 0.1);
+}
+
+.form-input-error:focus {
+  border-color: #dc2626 !important;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+}
+
+.form-error {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  color: #dc2626;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.dark .form-error {
+  color: #ef4444;
+}
+
+.form-char-counter {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  color: #64748b;
+  text-align: right;
+}
+
+.dark .form-char-counter {
+  color: #94a3b8;
+}
+
 .form-checkbox-group {
   display: flex;
   align-items: flex-start;
