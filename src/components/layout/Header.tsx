@@ -34,6 +34,12 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
             >
               Contact
             </button>
+            <button
+              onClick={() => setCurrentPage('contact')}
+              className="cta-button"
+            >
+              Devis GRATUIT
+            </button>
 
             <button
               onClick={toggleTheme}

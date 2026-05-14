@@ -11,6 +11,7 @@ export function FormulaireSection() {
     projectType: '',
     message: '',
   })
+  const [acceptTerms, setAcceptTerms] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -28,6 +29,7 @@ export function FormulaireSection() {
       if (response.ok) {
         setFormStatus('success')
         setFormData({ name: '', email: '', phone: '', projectType: '', message: '' })
+        setAcceptTerms(false)
         setTimeout(() => setFormStatus('idle'), 5000)
       } else {
         setFormStatus('error')
@@ -143,9 +145,23 @@ export function FormulaireSection() {
           />
         </div>
 
+        <div className="form-checkbox-group">
+          <input
+            type="checkbox"
+            id="acceptTerms"
+            checked={acceptTerms}
+            onChange={(e) => setAcceptTerms(e.target.checked)}
+            required
+            className="form-checkbox"
+          />
+          <label htmlFor="acceptTerms" className="form-checkbox-label">
+            J'accepte que mes données soient utilisées pour me recontacter concernant ma demande de devis
+          </label>
+        </div>
+
         <button
           type="submit"
-          disabled={formStatus === 'submitting'}
+          disabled={formStatus === 'submitting' || !acceptTerms}
           className="form-submit-btn"
         >
           {formStatus === 'submitting' ? (
