@@ -3,24 +3,24 @@ import { Button } from '@components/ui'
 import { SERVICES } from '@constants'
 
 interface HeroSectionProps {
-  onNavigateToContact?: () => void
+  onNavigateToContact: () => void
 }
 
 export function HeroSection({ onNavigateToContact }: HeroSectionProps) {
   return (
     <section className="hero-section-construction">
       <div className="hero-logo-main">
-        <img src="/logo.png" alt="Athies Batiment Logo" className="hero-logo-image" />
+        <img src="/logo.png" alt="ABASSI BTP Logo" className="hero-logo-image" />
       </div>
 
       <h1 className="hero-title-construction">
-        Couvreur, Maçon & Menuisier
+        Entreprise de BTP
         <br />
-        <span className="hero-location-accent">à Laon et dans l'Aisne (02)</span>
+        <span className="hero-location-accent">à Strasbourg et en Alsace</span>
       </h1>
 
       <p className="hero-subtitle-construction">
-        Travaux de rénovation, construction et isolation pour particuliers et professionnels
+        Gros œuvre, rénovation et aménagement extérieur pour particuliers et professionnels
       </p>
 
       <div className="services-pills">
@@ -32,9 +32,9 @@ export function HeroSection({ onNavigateToContact }: HeroSectionProps) {
       </div>
 
       <div className="certifications-badges">
-        <span className="cert-badge">✔ Certifié RGE</span>
-        <span className="cert-badge">✔ Certifié Eco-artisan</span>
-        <span className="cert-badge">📍 Laon • Reims • Soissons</span>
+        <span className="cert-badge">📅 Depuis 2026</span>
+        <span className="cert-badge">🏢 SAS</span>
+        <span className="cert-badge">📍 Strasbourg • Alsace</span>
       </div>
 
       <div className="hero-cta-buttons">

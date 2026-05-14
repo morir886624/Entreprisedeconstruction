@@ -1,7 +1,7 @@
 import { Button } from '@components/ui'
 
 interface CTASectionProps {
-  onNavigateToContact?: () => void
+  onNavigateToContact: () => void
 }
 
 export function CTASection({ onNavigateToContact }: CTASectionProps) {

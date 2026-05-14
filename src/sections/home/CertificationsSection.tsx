@@ -3,20 +3,17 @@ import { SectionTitle, Button } from '@components/ui'
 export function CertificationsSection() {
   return (
     <section className="certifications-section">
-      <SectionTitle title="NOS CERTIFICATIONS" />
+      <SectionTitle title="NOTRE ENTREPRISE" />
       <p className="certifications-text">
-        Athies Batiment est certifié RGE avec le label ECO artisan. Le dispositif CEE peut prendre en charge environ 40% du montant de vos travaux réalisés avec des matériaux écologiques.
+        ABASSI BTP est une société par actions simplifiée (SAS) immatriculée au RCS de Strasbourg sous le numéro 100 492 750. Entreprise créée en 2026, nous mettons notre expertise au service de vos projets de construction et rénovation.
       </p>
       <div className="certifications-logos">
         <div className="cert-logo-placeholder">
-          <span>RGE<br/>Eco-artisan</span>
+          <span>SAS<br/>Depuis 2026</span>
         </div>
         <div className="cert-logo-placeholder">
-          <span>CEE</span>
+          <span>RCS Strasbourg<br/>100 492 750</span>
         </div>
-      </div>
-      <div className="cert-cta">
-        <Button variant="secondary">EN SAVOIR PLUS</Button>
       </div>
     </section>
   )

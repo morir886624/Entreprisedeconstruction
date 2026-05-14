@@ -7,15 +7,10 @@ interface MobileNavProps {
 }
 
 export function MobileNav({ currentPage, setCurrentPage }: MobileNavProps) {
-  const handleNavigation = (page: 'home' | 'contact') => {
-    setCurrentPage(page)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
   return (
     <nav className="mobile-nav">
       <button
-        onClick={() => handleNavigation('home')}
+        onClick={() => setCurrentPage('home')}
         className={`mobile-nav-button ${currentPage === 'home' ? 'active' : ''}`}
         aria-label="Accueil"
       >
@@ -24,7 +19,7 @@ export function MobileNav({ currentPage, setCurrentPage }: MobileNavProps) {
       </button>
 
       <button
-        onClick={() => handleNavigation('contact')}
+        onClick={() => setCurrentPage('contact')}
         className={`mobile-nav-button ${currentPage === 'contact' ? 'active' : ''}`}
         aria-label="Contact"
       >

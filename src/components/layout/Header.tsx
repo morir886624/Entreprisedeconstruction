@@ -11,30 +11,25 @@ interface HeaderProps {
 export function Header({ currentPage, setCurrentPage }: HeaderProps) {
   const { theme, toggleTheme } = useTheme()
 
-  const handleNavigation = (page: 'home' | 'contact') => {
-    setCurrentPage(page)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
   return (
     <header className="header">
       <div className="header-container">
         <div className="header-content">
-          <div className="header-logo-section" onClick={() => handleNavigation('home')}>
+          <div className="header-logo-section" onClick={() => setCurrentPage('home')}>
             <div className="header-logo">
-              <img src="/logo.png" alt="Athies Batiment Logo" className="header-logo-image" />
+              <img src="/logo.png" alt="ABASSI BTP Logo" className="header-logo-image" />
             </div>
           </div>
 
           <nav className="header-nav">
             <button
-              onClick={() => handleNavigation('home')}
+              onClick={() => setCurrentPage('home')}
               className={`nav-button ${currentPage === 'home' ? 'active' : 'inactive'}`}
             >
               Accueil
             </button>
             <button
-              onClick={() => handleNavigation('contact')}
+              onClick={() => setCurrentPage('contact')}
               className={`nav-button ${currentPage === 'contact' ? 'active' : 'inactive'}`}
             >
               Contact

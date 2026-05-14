@@ -114,12 +114,14 @@ export function FormulaireSection() {
             className="form-input"
           >
             <option value="">Sélectionnez un service</option>
-            <option value="couverture">Couverture</option>
-            <option value="maconnerie">Maçonnerie</option>
-            <option value="menuiserie">Menuiserie</option>
-            <option value="renovation">Rénovation</option>
+            <option value="maconnerie">Maçonnerie générale</option>
+            <option value="ravalement">Ravalement de façades</option>
             <option value="isolation">Isolation</option>
-            <option value="peinture">Peinture - Plâtrerie</option>
+            <option value="bardage">Bardage</option>
+            <option value="terrassement">Terrassement</option>
+            <option value="amenagement">Aménagements extérieurs</option>
+            <option value="peinture">Peinture & Revêtements</option>
+            <option value="renovation">Rénovation</option>
             <option value="autre">Autre</option>
           </select>
         </div>

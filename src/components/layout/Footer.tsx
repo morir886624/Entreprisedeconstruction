@@ -10,11 +10,6 @@ interface FooterProps {
 export function Footer({ currentPage, setCurrentPage }: FooterProps) {
   const currentYear = new Date().getFullYear()
 
-  const handleNavigation = (page: 'home' | 'contact') => {
-    setCurrentPage(page)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -29,7 +24,7 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
             <ul className="footer-links-list">
               <li>
                 <button
-                  onClick={() => handleNavigation('home')}
+                  onClick={() => setCurrentPage('home')}
                   className={currentPage === 'home' ? 'footer-link active' : 'footer-link'}
                 >
                   Accueil
@@ -37,7 +32,7 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
               </li>
               <li>
                 <button
-                  onClick={() => handleNavigation('contact')}
+                  onClick={() => setCurrentPage('contact')}
                   className={currentPage === 'contact' ? 'footer-link active' : 'footer-link'}
                 >
                   Contact
