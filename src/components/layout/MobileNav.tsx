@@ -2,8 +2,8 @@ import { Home, MessageSquare } from 'lucide-react'
 import './MobileNav.css'
 
 interface MobileNavProps {
-  currentPage: 'home' | 'contact'
-  setCurrentPage: (page: 'home' | 'contact') => void
+  currentPage: 'home' | 'contact' | 'mentions'
+  setCurrentPage: (page: 'home' | 'contact' | 'mentions') => void
 }
 
 export function MobileNav({ currentPage, setCurrentPage }: MobileNavProps) {

@@ -16,7 +16,7 @@ export function HeroSection({ onNavigateToContact }: HeroSectionProps) {
       <h1 className="hero-title-construction">
         Entreprise de BTP
         <br />
-        <span className="hero-location-accent">à Strasbourg et en Alsace</span>
+        <span className="hero-location-accent">à Illkirch et en Alsace</span>
       </h1>
 
       <p className="hero-subtitle-construction">
@@ -34,16 +34,16 @@ export function HeroSection({ onNavigateToContact }: HeroSectionProps) {
       <div className="certifications-badges">
         <span className="cert-badge">📅 Depuis 2026</span>
         <span className="cert-badge">🏢 SAS</span>
-        <span className="cert-badge">📍 Strasbourg • Alsace</span>
+        <span className="cert-badge">📍 Illkirch • Alsace</span>
       </div>
 
       <div className="hero-cta-buttons">
         <Button variant="primary" size="lg" onClick={onNavigateToContact}>
           DEMANDER UN DEVIS GRATUIT
         </Button>
-        <Button variant="secondary" size="lg" onClick={() => window.location.href = 'tel:0646168723'}>
+        <Button variant="secondary" size="lg" onClick={() => window.location.href = 'tel:0768245995'}>
           <Phone className="w-5 h-5" />
-          06.46.16.87.23
+          07 68 24 59 95
         </Button>
       </div>
 

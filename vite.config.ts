@@ -35,6 +35,7 @@ export default defineConfig({
       '@constants': path.resolve(__dirname, './src/constants'),
       '@types': path.resolve(__dirname, './src/types'),
       '@styles': path.resolve(__dirname, './src/styles'),
+      '@data': path.resolve(__dirname, './src/data'),
     },
   },
 })

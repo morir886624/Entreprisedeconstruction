@@ -4,8 +4,8 @@ import { useTheme } from '@hooks/useTheme'
 import './Header.css'
 
 interface HeaderProps {
-  currentPage: 'home' | 'contact'
-  setCurrentPage: (page: 'home' | 'contact') => void
+  currentPage: 'home' | 'contact' | 'mentions'
+  setCurrentPage: (page: 'home' | 'contact' | 'mentions') => void
 }
 
 export function Header({ currentPage, setCurrentPage }: HeaderProps) {

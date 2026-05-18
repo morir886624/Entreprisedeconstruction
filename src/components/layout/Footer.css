@@ -171,6 +171,30 @@
   color: #94a3b8;
 }
 
+.footer-legal-link {
+  color: #475569;
+  font-size: 0.875rem;
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.dark .footer-legal-link {
+  color: #94a3b8;
+}
+
+.footer-legal-link:hover {
+  color: #0891b2;
+  text-decoration: underline;
+}
+
+.dark .footer-legal-link:hover {
+  color: #22d3ee;
+}
+
 .footer-made-with {
   display: flex;
   align-items: center;

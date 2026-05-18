@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { ArrowLeft } from 'lucide-react'
 import { SERVICES } from '@constants'
+import { serviceImages } from '@data/serviceImages'
 import { CTASection } from '@sections/home'
 import './ServiceDetail.css'
 
@@ -12,6 +13,7 @@ interface ServiceDetailProps {
 
 export function ServiceDetail({ serviceId, onNavigateBack, onNavigateToContact }: ServiceDetailProps) {
   const service = SERVICES.find(s => s.id === serviceId)
+  const image = service ? serviceImages[service.id] : null
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -40,7 +42,11 @@ export function ServiceDetail({ serviceId, onNavigateBack, onNavigateToContact }
         </button>
 
         <div className="service-detail-hero">
-          <img src={service.image} alt={service.nom} className="service-detail-image" />
+          <img
+            src={image?.src || service.image}
+            alt={image?.alt || service.nom}
+            className="service-detail-image"
+          />
           <div className="service-detail-overlay"></div>
           <h1 className="service-detail-title">{service.nom}</h1>
         </div>

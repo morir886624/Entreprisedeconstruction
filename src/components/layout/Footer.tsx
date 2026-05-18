@@ -3,8 +3,8 @@ import { CONTACT_INFO, NAV_LINKS } from '@constants'
 import './Footer.css'
 
 interface FooterProps {
-  currentPage: 'home' | 'contact'
-  setCurrentPage: (page: 'home' | 'contact') => void
+  currentPage: 'home' | 'contact' | 'mentions'
+  setCurrentPage: (page: 'home' | 'contact' | 'mentions') => void
 }
 
 export function Footer({ currentPage, setCurrentPage }: FooterProps) {
@@ -76,6 +76,12 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
             <p className="footer-copyright">
               © {currentYear} {CONTACT_INFO.nom}. Tous droits réservés.
             </p>
+            <button
+              onClick={() => setCurrentPage('mentions')}
+              className="footer-legal-link"
+            >
+              Mentions légales
+            </button>
           </div>
         </div>
       </div>

@@ -2,17 +2,18 @@ import { useState } from 'react'
 import { ThemeProvider } from '@context/ThemeContext'
 import { Header, Footer, MobileNav } from '@components/layout'
 import { Home, Contact, ServiceDetail } from '@pages'
+import { MentionsLegales } from '@pages/MentionsLegales'
 import '../App.css'
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<'home' | 'contact' | 'service'>('home')
+  const [currentPage, setCurrentPage] = useState<'home' | 'contact' | 'service' | 'mentions'>('home')
   const [selectedServiceId, setSelectedServiceId] = useState<string | null>(null)
 
   return (
     <ThemeProvider>
       <div className="app-container">
         <Header
-          currentPage={currentPage === 'contact' ? 'contact' : 'home'}
+          currentPage={currentPage === 'contact' ? 'contact' : currentPage === 'mentions' ? 'mentions' : 'home'}
           setCurrentPage={(page) => {
             setCurrentPage(page)
             setSelectedServiceId(null)
@@ -35,6 +36,7 @@ export default function App() {
             />
           )}
           {currentPage === 'contact' && <Contact />}
+          {currentPage === 'mentions' && <MentionsLegales />}
           {currentPage === 'service' && selectedServiceId && (
             <ServiceDetail
               serviceId={selectedServiceId}
@@ -52,7 +54,7 @@ export default function App() {
         </main>
 
         <Footer
-          currentPage={currentPage === 'contact' ? 'contact' : 'home'}
+          currentPage={currentPage === 'contact' ? 'contact' : currentPage === 'mentions' ? 'mentions' : 'home'}
           setCurrentPage={(page) => {
             setCurrentPage(page)
             setSelectedServiceId(null)
@@ -60,7 +62,7 @@ export default function App() {
           }}
         />
         <MobileNav
-          currentPage={currentPage === 'contact' ? 'contact' : 'home'}
+          currentPage={currentPage === 'contact' ? 'contact' : currentPage === 'mentions' ? 'mentions' : 'home'}
           setCurrentPage={(page) => {
             setCurrentPage(page)
             setSelectedServiceId(null)
