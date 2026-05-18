@@ -19,31 +19,28 @@ export function MentionsLegales() {
           <h2 className="mentions-subtitle">Propriétaire du site</h2>
           <div className="mentions-info-block">
             <p className="mentions-text">
-              <strong>Raison sociale :</strong> Athies Batiment
+              <strong>Raison sociale :</strong> ABASSI BTP
             </p>
             <p className="mentions-text">
-              <strong>SIRET :</strong> 83977760400027
+              <strong>SIRET :</strong> Coming soon
             </p>
             <p className="mentions-text">
-              <strong>Adresse :</strong> Zone industrielle les Minimes, 47 Rue Georges Brassens, 02840 Athies-sous-Laon, France
+              <strong>Adresse :</strong> 7 Esplanade Solange Fernex, 67400 Illkirch-Graffenstaden, France
             </p>
             <p className="mentions-text">
-              <strong>Téléphone :</strong> <a href="tel:0646168723" className="mentions-link">06.46.16.87.23</a>
+              <strong>Téléphone :</strong> <a href="tel:+33768245995" className="mentions-link">+33 7 68 24 59 95</a>
             </p>
             <p className="mentions-text">
-              <strong>Email :</strong> <a href="mailto:jeanbaptiste.prudhomme@sfr.fr" className="mentions-link">jeanbaptiste.prudhomme@sfr.fr</a>
+              <strong>Email :</strong> <a href="mailto:Abassyan67@gmail.com" className="mentions-link">Abassyan67@gmail.com</a>
             </p>
             <p className="mentions-text">
-              <strong>URL du site :</strong> <a href="https://btp.morir.fr/" target="_blank" rel="noopener noreferrer" className="mentions-link">https://btp.morir.fr/</a>
+              <strong>Site web :</strong> <a href="https://btp.morir.fr/" target="_blank" rel="noopener noreferrer" className="mentions-link">https://btp.morir.fr/</a>
             </p>
           </div>
         </section>
 
         <section className="mentions-section">
           <h2 className="mentions-subtitle">Conception et développement du site</h2>
-          <p className="mentions-text">
-            Ce site a été conçu et développé par <strong>Hexa web</strong>, agence de création de sites internet sur mesure.
-          </p>
           <p className="mentions-text">
             <strong>Contact créateur :</strong> <a href="mailto:moeid6624@gmail.com" className="mentions-link">moeid6624@gmail.com</a>
           </p>
