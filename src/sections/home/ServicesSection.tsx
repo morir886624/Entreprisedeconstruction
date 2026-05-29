@@ -17,7 +17,7 @@ export function ServicesSection({ onNavigateToService }: ServicesSectionProps) {
         {SERVICES.map((service) => {
           const image = serviceImages[service.id]
           return (
-            <div
+            <article
               key={service.id}
               className="service-card"
               onClick={() => onNavigateToService(service.id)}
@@ -26,12 +26,14 @@ export function ServicesSection({ onNavigateToService }: ServicesSectionProps) {
                 src={image?.src || service.image}
                 alt={image?.alt || service.nom}
                 className="service-image"
+                loading="lazy"
+                decoding="async"
               />
               <div className="service-overlay">
                 <h3 className="service-name">{service.nom}</h3>
                 <button className="service-btn">VOIR +</button>
               </div>
-            </div>
+            </article>
           )
         })}
       </div>

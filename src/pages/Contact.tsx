@@ -3,6 +3,7 @@ import {
   FormulaireSection,
   InfosContactSection,
 } from "@sections/contact";
+import { Seo } from "@components/seo";
 import "@sections/contact/contact.css";
 
 export function Contact() {
@@ -12,6 +13,11 @@ export function Contact() {
 
   return (
     <div className="contact-page">
+      <Seo
+        title="Contact & Devis gratuit - ABASSI BTP"
+        description="Contactez ABASSI BTP pour un devis gratuit de vos travaux de maçonnerie, ravalement, isolation ou rénovation à Strasbourg et en Alsace."
+        path="/contact"
+      />
       <div className="contact-page-content">
         <div className="contact-header">
           <h1 className="contact-title">

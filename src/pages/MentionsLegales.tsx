@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { Seo } from '@components/seo'
 import './MentionsLegales.css'
 
 export function MentionsLegales() {
@@ -8,6 +9,11 @@ export function MentionsLegales() {
 
   return (
     <div className="mentions-page">
+      <Seo
+        title="Mentions légales - ABASSI BTP"
+        description="Mentions légales du site ABASSI BTP, entreprise de BTP à Illkirch-Graffenstaden."
+        path="/mentions-legales"
+      />
       <div className="mentions-container">
         <h1 className="mentions-title">Mentions Légales</h1>
 

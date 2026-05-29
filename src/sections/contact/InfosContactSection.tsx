@@ -5,7 +5,7 @@ export function InfosContactSection() {
   return (
     <div className="contact-info-section">
       <div className="contact-info-card">
-        <h3 className="contact-info-title">Nos coordonnées</h3>
+        <h2 className="contact-info-title">Nos coordonnées</h2>
 
         <div className="contact-info-items">
           <div className="contact-info-item">

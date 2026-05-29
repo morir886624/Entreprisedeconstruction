@@ -6,6 +6,7 @@ import {
   CertificationsSection,
   CTASection,
 } from '@sections/home'
+import { Seo } from '@components/seo'
 import '@sections/home/home.css'
 
 interface HomeProps {
@@ -20,6 +21,11 @@ export function Home({ onNavigateToContact, onNavigateToService }: HomeProps) {
 
   return (
     <div className="home-container">
+      <Seo
+        title="ABASSI BTP - Entreprise de BTP à Strasbourg et en Alsace"
+        description="Entreprise de BTP spécialisée en maçonnerie, ravalement, isolation, bardage, terrassement et rénovation à Strasbourg, Illkirch et en Alsace. Devis gratuit."
+        path="/"
+      />
       <div className="home-content">
         <HeroSection onNavigateToContact={onNavigateToContact} />
         <ServicesSection onNavigateToService={onNavigateToService} />

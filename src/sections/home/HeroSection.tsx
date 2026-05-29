@@ -10,7 +10,7 @@ export function HeroSection({ onNavigateToContact }: HeroSectionProps) {
   return (
     <section className="hero-section-construction">
       <div className="hero-logo-main">
-        <img src="/logo.png" alt="ABASSI BTP Logo" className="hero-logo-image" />
+        <img src="/logo.png" alt="ABASSI BTP Logo" className="hero-logo-image" width="200" height="200" />
       </div>
 
       <h1 className="hero-title-construction">
