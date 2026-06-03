@@ -78,9 +78,268 @@
   font-size: 1.125rem;
   line-height: 1.8;
   color: var(--color-text);
+  margin: 0 0 1.25rem;
+}
+
+.service-detail-description p:last-child {
+  margin-bottom: 0;
+}
+
+/* Sections communes */
+.service-section {
+  background: var(--color-surface);
+  padding: 2.5rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.service-section-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0 0 1.75rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* Avantages */
+.service-avantages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.service-avantage-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.875rem;
+  padding: 1.25rem;
+  background: var(--color-background);
+  border-radius: 0.75rem;
+  border: 1px solid rgba(var(--color-primary-rgb, 255, 165, 0), 0.15);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-avantage-card:hover {
+  border-color: var(--color-primary);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.service-avantage-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.service-avantage-titre {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.375rem;
+}
+
+.service-avantage-detail {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-text-muted, #6b7280);
   margin: 0;
 }
 
+/* Étapes */
+.service-etapes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.service-etape-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.service-etape-numero {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.service-etape-body {
+  flex: 1;
+  padding: 0.25rem 0;
+}
+
+.service-etape-titre {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 0.25rem;
+}
+
+.service-etape-desc {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--color-text-muted, #6b7280);
+  margin: 0;
+}
+
+/* Matériaux */
+.service-materiaux-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.75rem;
+}
+
+.service-materiau-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.95rem;
+  color: var(--color-text);
+  padding: 0.5rem 0;
+}
+
+.service-materiau-dot {
+  width: 8px;
+  height: 8px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* FAQ */
+.service-faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.service-faq-item {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.service-faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.125rem 1.25rem;
+  background: var(--color-background);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-text);
+  transition: background 0.2s ease;
+}
+
+.service-faq-question:hover {
+  background: rgba(var(--color-primary-rgb, 255, 165, 0), 0.06);
+}
+
+.service-faq-chevron {
+  width: 1.125rem;
+  height: 1.125rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.service-faq-reponse {
+  padding: 1rem 1.25rem 1.25rem;
+  background: var(--color-surface);
+  border-top: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.service-faq-reponse p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-muted, #6b7280);
+  margin: 0;
+}
+
+/* Zones */
+.service-zones-section {
+  background: var(--color-surface);
+  border-left: 4px solid var(--color-primary);
+}
+
+.service-zones-section .service-section-title {
+  color: var(--color-text);
+  border-bottom-color: var(--color-primary);
+}
+
+.service-zones-header {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin-bottom: 1.75rem;
+}
+
+.service-section-title--inline {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.service-zones-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.service-zones-intro {
+  color: var(--color-text-muted, #6b7280);
+  font-size: 0.95rem;
+  margin: 0 0 1.25rem;
+  line-height: 1.6;
+}
+
+.service-zones-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.service-zone-tag {
+  background: rgba(var(--color-primary-rgb, 255, 165, 0), 0.1);
+  color: var(--color-primary);
+  border: 1px solid rgba(var(--color-primary-rgb, 255, 165, 0), 0.35);
+  border-radius: 2rem;
+  padding: 0.375rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.service-zone-tag:hover {
+  background: rgba(var(--color-primary-rgb, 255, 165, 0), 0.2);
+  color: var(--color-primary-dark, #e08000);
+  border-color: var(--color-primary);
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .service-detail-hero {
     height: 300px;
@@ -94,10 +353,26 @@
   }
 
   .service-detail-description {
-    padding: 2rem;
+    padding: 1.75rem;
   }
 
   .service-detail-description p {
     font-size: 1rem;
+  }
+
+  .service-section {
+    padding: 1.75rem;
+  }
+
+  .service-section-title {
+    font-size: 1.25rem;
+  }
+
+  .service-avantages-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-materiaux-list {
+    grid-template-columns: 1fr;
   }
 }
