@@ -1,5 +1,5 @@
 import { Phone, Mail, MapPin } from 'lucide-react'
-import { CONTACT_INFO, NAV_LINKS } from '@constants'
+import { CONTACT_INFO } from '@constants'
 import './Footer.css'
 
 interface FooterProps {

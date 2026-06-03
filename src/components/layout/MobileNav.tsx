@@ -8,7 +8,7 @@ interface MobileNavProps {
 
 export function MobileNav({ currentPage, setCurrentPage }: MobileNavProps) {
   return (
-    <nav className="mobile-nav">
+    <nav className="mobile-nav" aria-label="Navigation mobile">
       <button
         onClick={() => setCurrentPage('home')}
         className={`mobile-nav-button ${currentPage === 'home' ? 'active' : ''}`}

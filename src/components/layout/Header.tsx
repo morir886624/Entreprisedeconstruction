@@ -1,5 +1,4 @@
 import { Moon, Sun } from 'lucide-react'
-import { NAV_LINKS } from '@constants'
 import { useTheme } from '@hooks/useTheme'
 import './Header.css'
 
@@ -21,7 +20,7 @@ export function Header({ currentPage, setCurrentPage }: HeaderProps) {
             </div>
           </div>
 
-          <nav className="header-nav">
+          <nav className="header-nav" aria-label="Navigation principale">
             <button
               onClick={() => setCurrentPage('home')}
               className={`nav-button ${currentPage === 'home' ? 'active' : 'inactive'}`}
