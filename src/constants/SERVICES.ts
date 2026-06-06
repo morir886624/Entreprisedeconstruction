@@ -5,14 +5,14 @@ export const SERVICES: Service[] = [
     id: "maconnerie",
     nom: "MAÇONNERIE GÉNÉRALE",
     description: "Gros œuvre, fondations, murs porteurs",
-    fullDescription: `Notre équipe de maçons qualifiés réalise l'ensemble de vos travaux de maçonnerie générale en Alsace, du gros œuvre jusqu'aux finitions soignées. Forts de plus de 10 ans d'expérience dans le bâtiment, nous intervenons sur tous types de chantiers à Strasbourg, Illkirch-Graffenstaden et dans un rayon de 50 km.
+    fullDescription: `Notre équipe de maçons qualifiés réalise l'ensemble de vos travaux de maçonnerie générale en Alsace, du gros œuvre jusqu'aux finitions soignées. Jeune entreprise dynamique basée à Illkirch-Graffenstaden, nous mettons notre rigueur et notre motivation au service de tous types de chantiers à Strasbourg et dans un rayon de 50 km.
 
 Nous prenons en charge la construction de fondations solides et durables, l'édification de murs porteurs, la création d'ouvertures (portes, fenêtres, baies vitrées), la pose de linteaux et de dalles en béton armé. Chaque intervention est réalisée dans le strict respect des normes DTU en vigueur et des règles de l'art, pour vous garantir un ouvrage pérenne et sécurisé.
 
 Que vous envisagiez une construction neuve, une extension de maison, la réhabilitation d'un bâtiment existant ou des travaux de rénovation, ABASSI BTP vous accompagne de la première pierre jusqu'à la réception du chantier. Notre chef de chantier veille personnellement à la qualité d'exécution et au respect des délais.`,
     image: "https://images.unsplash.com/photo-1597476374792-c9e5bfdca9ff?w=600&h=400&fit=crop",
     avantages: [
-      { titre: "Maçons certifiés RGE", detail: "Nos artisans disposent des qualifications professionnelles reconnues par l'État." },
+      { titre: "Maçons qualifiés", detail: "Nos artisans disposent des qualifications professionnelles requises pour vos travaux." },
       { titre: "Devis gratuit et détaillé", detail: "Nous établissons un devis précis et transparent sous 48h après visite du chantier." },
       { titre: "Respect des normes DTU", detail: "Tous nos travaux respectent les Documents Techniques Unifiés en vigueur." },
       { titre: "Garantie décennale", detail: "Vous bénéficiez de la garantie décennale obligatoire sur l'ensemble de nos ouvrages." },
@@ -28,7 +28,7 @@ Que vous envisagiez une construction neuve, une extension de maison, la réhabil
     faq: [
       { question: "Quel délai pour une extension de maison ?", reponse: "La durée dépend de la surface et de la complexité. Une extension de 30 m² nécessite généralement 6 à 10 semaines de travaux après obtention du permis de construire." },
       { question: "Faut-il un permis de construire pour des travaux de maçonnerie ?", reponse: "Cela dépend de la nature des travaux. Pour une surface inférieure à 20 m² en zone urbaine, une simple déclaration préalable suffit. Au-delà ou si vous êtes en lotissement, un permis de construire est requis. Nous vous guidons dans vos démarches administratives." },
-      { question: "Intervenez-vous sur des bâtiments anciens en pierre ?", reponse: "Oui, nous avons une solide expérience de la rénovation de bâtiments anciens, notamment les maisons alsaciennes en colombages et les constructions en grès des Vosges." },
+      { question: "Intervenez-vous sur des bâtiments anciens en pierre ?", reponse: "Oui, nous intervenons sur les bâtiments anciens, notamment les maisons alsaciennes en colombages et les constructions en grès des Vosges. Chaque chantier fait l'objet d'une étude préalable adaptée." },
     ],
     zones: ["Strasbourg", "Illkirch-Graffenstaden", "Eschau", "Ostwald", "Geispolsheim", "Oberhausbergen", "Schiltigheim", "Hoenheim"],
   },
@@ -38,7 +38,7 @@ Que vous envisagiez une construction neuve, une extension de maison, la réhabil
     description: "Rénovation et embellissement de façades",
     fullDescription: `Le ravalement de façade est une opération essentielle pour préserver la valeur et l'esthétique de votre bâtiment. Obligatoire tous les 10 ans dans certaines communes, il protège votre bien contre l'humidité, les moisissures et les dégradations liées aux intempéries alsaciennes.
 
-ABASSI BTP réalise votre ravalement de façade à Strasbourg et dans toute la région du Bas-Rhin avec soin et expertise. Notre service comprend le nettoyage haute pression, le traitement des fissures et des zones dégradées, l'application d'enduits de protection et la mise en peinture finale.
+ABASSI BTP réalise votre ravalement de façade à Strasbourg et dans toute la région du Bas-Rhin avec soin et rigueur. Notre service comprend le nettoyage haute pression, le traitement des fissures et des zones dégradées, l'application d'enduits de protection et la mise en peinture finale.
 
 Nous intervenons sur tous types de façades : crépi (monocouche ou bi-couche), pierre naturelle (grès des Vosges, calcaire), brique, enduit à la chaux, béton. Nous respectons scrupuleusement les réglementations des Architectes des Bâtiments de France (ABF) pour les secteurs protégés et les PLU locaux.`,
     image: "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?w=600&h=400&fit=crop",
@@ -129,7 +129,7 @@ Au-delà de son aspect décoratif, le bardage ventilé crée une lame d'air entr
     id: "terrassement",
     nom: "TERRASSEMENT ET VRD",
     description: "Préparation de terrains et VRD",
-    fullDescription: `Le terrassement est la première étape cruciale de tout projet de construction. Un terrassement bien exécuté conditionne la solidité et la pérennité de l'ouvrage à venir. ABASSI BTP dispose du savoir-faire et du matériel nécessaires pour mener à bien vos travaux de terrassement, du petit chantier résidentiel au grand projet commercial.
+    fullDescription: `Le terrassement est la première étape cruciale de tout projet de construction. Un terrassement bien exécuté conditionne la solidité et la pérennité de l'ouvrage à venir. ABASSI BTP dispose des compétences et du matériel nécessaires pour mener à bien vos travaux de terrassement, du chantier résidentiel aux projets de plus grande ampleur.
 
 Nous réalisons l'ensemble des travaux de terrassement en Alsace : décapage de la terre végétale, excavation des fouilles pour fondations, nivellement et mise en forme du terrain, remblaiement contrôlé et compactage aux normes. Notre équipe intervient avec des engins adaptés à chaque configuration : mini-pelle pour les accès difficiles, tractopelle pour les surfaces intermédiaires, ou bull et compacteurs pour les grands chantiers.
 
@@ -222,16 +222,16 @@ Notre offre couvre la peinture décorative (uni, effet béton ciré, enduit à l
     id: "renovation",
     nom: "RÉNOVATION COMPLÈTE",
     description: "Rénovation complète de bâtiments",
-    fullDescription: `La rénovation complète d'un bâtiment est un projet ambitieux qui nécessite une expertise globale et une coordination parfaite de tous les corps de métier. ABASSI BTP est votre partenaire unique pour tous vos projets de rénovation à Strasbourg et en Alsace : maison individuelle, appartement, local commercial ou immeuble entier.
+    fullDescription: `La rénovation complète d'un bâtiment est un projet ambitieux qui nécessite une approche globale et une coordination soignée de tous les corps de métier. ABASSI BTP est votre interlocuteur unique pour vos projets de rénovation à Strasbourg et en Alsace : maison individuelle, appartement ou local commercial.
 
 Nous prenons en charge votre projet de rénovation de A à Z : diagnostic initial et état des lieux, conception et plans (en collaboration avec votre architecte si nécessaire), coordination de tous les corps de métier (maçonnerie, isolation, plâtrerie, électricité, plomberie, peinture, revêtements), suivi de chantier quotidien et contrôle qualité, jusqu'à la livraison finale avec remise des clés.
 
-Nous avons une expertise particulière dans la rénovation de bâtiments anciens alsaciens : maisons à colombages, fermes typiques, maisons de ville en grès des Vosges. Nous savons concilier les techniques modernes avec la préservation du cachet architectural d'origine, pour un résultat qui allie confort contemporain et authenticité régionale.`,
+Nous portons une attention particulière à la rénovation de bâtiments anciens alsaciens : maisons à colombages, fermes typiques, maisons de ville en grès des Vosges. Notre objectif est de concilier les techniques modernes avec la préservation du cachet architectural d'origine, pour un résultat qui allie confort contemporain et authenticité régionale.`,
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop",
     avantages: [
       { titre: "Interlocuteur unique", detail: "Un seul point de contact pour tous les corps de métier, pour une coordination sans stress." },
       { titre: "Maîtrise du budget", detail: "Devis global détaillé avec réserves contingentes clairement identifiées, sans mauvaises surprises." },
-      { titre: "Expertise bâti ancien", detail: "Savoir-faire spécifique pour les maisons alsaciennes à colombages et les bâtiments classés." },
+      { titre: "Attention au bâti ancien", detail: "Approche adaptée aux maisons alsaciennes à colombages et aux bâtiments à cachet." },
       { titre: "Aides à la rénovation", detail: "Accompagnement complet pour le montage des dossiers MaPrimeRénov, ANAH et Eco-PTZ." },
     ],
     etapes: [
