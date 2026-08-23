@@ -44,13 +44,23 @@ export function Footer({ currentPage, setCurrentPage }: FooterProps) {
           <div>
             <h3 className="footer-section-title">Nous contacter</h3>
             <div className="footer-social-links">
-              <a
-                href={`tel:${CONTACT_INFO.telephoneLien}`}
-                className="footer-social-link"
-                aria-label="Téléphone"
-              >
-                <Phone className="footer-social-icon" />
-              </a>
+              {CONTACT_INFO.telephoneAVenir ? (
+                <span
+                  className="footer-social-link footer-social-link--pending"
+                  aria-label="Téléphone à venir"
+                  title="Numéro de téléphone à venir"
+                >
+                  <Phone className="footer-social-icon" />
+                </span>
+              ) : (
+                <a
+                  href={`tel:${CONTACT_INFO.telephoneLien}`}
+                  className="footer-social-link"
+                  aria-label="Téléphone"
+                >
+                  <Phone className="footer-social-icon" />
+                </a>
+              )}
               <a
                 href={`mailto:${CONTACT_INFO.email}`}
                 className="footer-social-link"

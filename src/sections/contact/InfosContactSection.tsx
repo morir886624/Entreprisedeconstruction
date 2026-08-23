@@ -12,9 +12,15 @@ export function InfosContactSection() {
             <Phone className="contact-info-icon" />
             <div>
               <div className="contact-info-label">Téléphone</div>
-              <a href={`tel:${CONTACT_INFO.telephoneLien}`} className="contact-info-value">
-                {CONTACT_INFO.telephone}
-              </a>
+              {CONTACT_INFO.telephoneAVenir ? (
+                <span className="contact-info-value contact-info-value--pending">
+                  À venir
+                </span>
+              ) : (
+                <a href={`tel:${CONTACT_INFO.telephoneLien}`} className="contact-info-value">
+                  {CONTACT_INFO.telephone}
+                </a>
+              )}
             </div>
           </div>
 

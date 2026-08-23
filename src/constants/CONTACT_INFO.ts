@@ -3,6 +3,8 @@ export const CONTACT_INFO = {
   formeJuridique: 'SAS',
   titre: 'Entreprise de BTP - Gros œuvre et rénovation',
   adresse: '7 Esplanade Solange Fernex, 67400 Illkirch-Graffenstaden',
+  // Numéro à venir : un nouveau numéro sera bientôt communiqué
+  telephoneAVenir: true,
   telephone: '07 68 24 59 95',
   telephoneLien: '0768245995',
   email: 'Abassyan67@gmail.com',

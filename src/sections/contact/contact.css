@@ -323,6 +323,25 @@
   color: #06b6d4;
 }
 
+.contact-info-value--pending {
+  display: inline-block;
+  color: #64748b;
+  font-style: italic;
+  cursor: default;
+}
+
+.dark .contact-info-value--pending {
+  color: #94a3b8;
+}
+
+.contact-info-value--pending:hover {
+  color: #64748b;
+}
+
+.dark .contact-info-value--pending:hover {
+  color: #94a3b8;
+}
+
 .contact-divider {
   height: 1px;
   background: rgba(6, 182, 212, 0.2);

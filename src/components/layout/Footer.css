@@ -120,6 +120,21 @@
   background-color: rgba(6, 182, 212, 0.1);
 }
 
+.footer-social-link--pending {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.footer-social-link--pending:hover {
+  border-color: rgba(203, 213, 225, 0.5);
+  background-color: #f1f5f9;
+}
+
+.dark .footer-social-link--pending:hover {
+  border-color: rgba(51, 65, 85, 0.5);
+  background-color: rgba(30, 41, 59, 0.5);
+}
+
 .footer-social-icon {
   width: 1.25rem;
   height: 1.25rem;

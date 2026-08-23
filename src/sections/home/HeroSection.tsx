@@ -1,6 +1,6 @@
 import { Phone, ChevronDown } from 'lucide-react'
 import { Button } from '@components/ui'
-import { SERVICES } from '@constants'
+import { SERVICES, CONTACT_INFO } from '@constants'
 
 interface HeroSectionProps {
   onNavigateToContact: () => void
@@ -41,10 +41,17 @@ export function HeroSection({ onNavigateToContact }: HeroSectionProps) {
         <Button variant="primary" size="lg" onClick={onNavigateToContact}>
           DEMANDER UN DEVIS GRATUIT
         </Button>
-        <Button variant="secondary" size="lg" onClick={() => window.location.href = 'tel:0768245995'}>
-          <Phone className="w-5 h-5" />
-          07 68 24 59 95
-        </Button>
+        {CONTACT_INFO.telephoneAVenir ? (
+          <Button variant="secondary" size="lg" onClick={onNavigateToContact}>
+            <Phone className="w-5 h-5" />
+            Téléphone à venir
+          </Button>
+        ) : (
+          <Button variant="secondary" size="lg" onClick={() => window.location.href = `tel:${CONTACT_INFO.telephoneLien}`}>
+            <Phone className="w-5 h-5" />
+            {CONTACT_INFO.telephone}
+          </Button>
+        )}
       </div>
 
       <div className="scroll-indicator">
